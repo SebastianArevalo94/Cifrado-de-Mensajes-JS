@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>index.html ?</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">CIFRADOR DE MENSAJES</h1>
+      <form class="form">
+        <input
+          class="form__input"
+          id="msj"
+          type="text"
+          placeholder="Introduce un mensaje"
+        />
+        <div class="input-range">
+          <input
+            class="form__range"
+            id="key"
+            type="range"
+            value="24"
+            min="1"
+            max="25"
+            oninput="this.nextElementSibling.value = this.value"
+          />
+          <output style="color: #fff">24</output>
+        </div>
+        <div class="button">
+          <button class="form__button" onclick="cifrar()" type="button">
+            Cifrar
+          </button>
+          <button class="form__button redb" onclick="clean()" type="button">
+            Limpiar
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="display" id="display"></div>
+  </body>
+</html>
+
